@@ -34,7 +34,26 @@
 <script type="text/javascript">
   $(document).ready(function () {
 
-    alert("world!!!");
+    
+    //create shopping array list
+    var shoppingList = [];
+
+    shoppingList.push("Milk");
+    shoppingList.push("Eggs");
+    shoppingList.push("Banana");
+    shoppingList.push("Sugar");
+    shoppingList.push("Apple");
+
+    //Append these items to the <div id="listdisp"></div>
+    //use Jquery to get the listdisp element from the DOM
+
+   var ShoppingListContainer = $('#listdisp');
+
+   for(var i=0; i<shoppingList.length; i++)
+   {
+     ShoppingListContainer.append("<div class='shoppingItems'>"+shoppingList[i]+"</div>");
+   }
+
 
   });
 </script>
