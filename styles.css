@@ -35,6 +35,8 @@ h1 {
 .header {
 width: 100%; 
 display: flex;
+    align-items: center;
+    
 }
 
 
@@ -54,16 +56,21 @@ input[type=text]  {
     border-color: transparent;
     opacity: .8;
     flex-grow: 9;
-    
+}
 
+input[type=text]:focus  {
+   -webkit-box-shadow: -1px 2px 48px -10px rgba(87,114,250,0.79);
+-moz-box-shadow: -1px 2px 48px -10px rgba(87,114,250,0.79);
+box-shadow: -1px 2px 48px -10px rgba(87,114,250,0.79);
 }
 
 input[type=submit]  {
     font-family: 'notcouriersansregular';
-    font-weight: ;
+    width: 80px;
+    font-weight: 800;
     height: 80px;
     margin: 2% 2%;
-    border-radius: 54px;
+    border-radius: 100px;
     background-color: royalblue;
     color: ghostwhite;
     font-size: 34px;
@@ -71,8 +78,7 @@ input[type=submit]  {
     letter-spacing: 2px;
     text-align: center;
     border-color: transparent;
-    opacity: .8;
-    flex-grow: 1;  
+
     -webkit-transition: background-color .5s ease-out;
   -moz-transition: background-color .5s ease-out;
   -o-transition: background-color .5s ease-out;
