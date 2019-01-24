@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'notcouriersansregular';
+    src: url('font/notcouriersans-webfont.woff2') format('woff2'),
+         url('font/notcouriersans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body { 
+background-color: midnightblue;
+display: flex;
+padding: 2% 8% 20% 8%;
+margin-bottom: 0px;;
+font-family: 'notcouriersansregular';
+}
+
+h1 {
+    font-size: 82px;
+    letter-spacing: 1px;
+    margin-bottom: 10%;
+}
+
+.bodysect {
+    width: 100%;
+}
+
+.bodysect h1 {
+    color: ghostwhite;
+    text-align: center;
+    font-weight:100;
+    
+}
+
+.header {
+width: 100%; 
+display: flex;
+}
+
+
+
+input[type=text]  {
+    font-family: 'notcouriersansregular';
+    font-weight: 100;
+    height: 80px;
+    margin: 2% 2%;
+    border-radius: 54px;
+    background-color: royalblue;
+    color: ghostwhite;
+    font-size: 34px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    border-color: transparent;
+    opacity: .8;
+    flex-grow: 9;
+    
+
+}
+
+input[type=submit]  {
+    font-family: 'notcouriersansregular';
+    font-weight: ;
+    height: 80px;
+    margin: 2% 2%;
+    border-radius: 54px;
+    background-color: royalblue;
+    color: ghostwhite;
+    font-size: 34px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    border-color: transparent;
+    opacity: .8;
+    flex-grow: 1;  
+    -webkit-transition: background-color .5s ease-out;
+  -moz-transition: background-color .5s ease-out;
+  -o-transition: background-color .5s ease-out;
+  transition: background-color .5s ease-out; 
+
+}
+
+input[type=submit]:hover {
+    background-color: black;
+    
+}
