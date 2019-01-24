@@ -14,7 +14,7 @@
 
     <!-- Here will be the main input where users add to list -->
     <div class="header">
-      <input id="listfield" type="text" value="Add list item"></input>
+      <input id="listfield" type="text" value="" placeholder="Add list item"></input>
       <input id="submitbtn" type="submit" value="submit"><a href="#"></a></input>
 
     </div>
@@ -34,7 +34,7 @@
 <script type="text/javascript">
   $(document).ready(function () {
 
-    
+
     //create shopping array list
     var shoppingList = [];
 
@@ -46,14 +46,36 @@
 
     //Append these items to the <div id="listdisp"></div>
     //use Jquery to get the listdisp element from the DOM
+    var ShoppingListContainer = $('#listdisp');
 
-   var ShoppingListContainer = $('#listdisp');
+    for(var i=0; i<shoppingList.length; i++)
+    {
+      ShoppingListContainer.append("<div class='shoppingItems'>"+shoppingList[i]+"</div>");
+    }
 
-   for(var i=0; i<shoppingList.length; i++)
-   {
-     ShoppingListContainer.append("<div class='shoppingItems'>"+shoppingList[i]+"</div>");
-   }
+    //lets declare a variable that will hold the value of the input box
+    var newItem ="";
 
+    //When the user click on the Submit button, we want to get the new item out of the input box
+    //lets create a click event using Jquery that listen to the mouse click on the submit button
+    $("#submitbtn").click(function()
+    {
+        //Lets get the new item that we need to add to the list using jquery
+        newItem = $("#listfield").val();//.val gets the value of the input
+        //lets push that new item to the shopping list
+        shoppingList.push(newItem);
+
+        // lets empty that Html shopping list container 
+        ShoppingListContainer.html("");
+       
+       //lets loop again through all of the items on the shopping list and add them to the shopping list container
+        for(var i=0; i<shoppingList.length; i++)
+        {
+          ShoppingListContainer.append("<div class='shoppingItems'>"+shoppingList[i]+"</div>");
+        }
+
+        $("#listfield").val("");//empty the input for the next item 
+   });
 
   });
 </script>
