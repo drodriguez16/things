@@ -39,6 +39,11 @@ display: flex;
     
 }
 
+::placeholder{
+    color: #fff;
+    opacity: .2;
+   
+}
 
 
 input[type=text]  {
@@ -56,12 +61,27 @@ input[type=text]  {
     border-color: transparent;
     opacity: .8;
     flex-grow: 9;
+    
 }
 
+input[type=text]:hover {
+    -webkit-box-shadow: -1px 2px 48px -10px rgba(87,114,250,0.79);
+    -moz-box-shadow: -1px 2px 48px -10px rgba(87,114,250,0.79);
+    box-shadow: -1px 2px 48px -10px rgba(87,114,250,0.79);
+    border:2px solid rgb(136, 175, 194);
+    transition: ease-in-out;
+    transition: 0.2s;
+   
+} 
+
 input[type=text]:focus  {
-   -webkit-box-shadow: -1px 2px 48px -10px rgba(87,114,250,0.79);
--moz-box-shadow: -1px 2px 48px -10px rgba(87,114,250,0.79);
-box-shadow: -1px 2px 48px -10px rgba(87,114,250,0.79);
+    -webkit-box-shadow: -1px 2px 48px -10px rgba(87,114,250,0.79);
+    -moz-box-shadow: -1px 2px 48px -10px rgba(87,114,250,0.79);
+    box-shadow: -1px 4px 48px -10px rgba(87,114,250,0.79);
+    border:2px solid #fff;
+    transition: ease-in-out;
+    transition: 0.4s;
+    background-color: rgb(89, 122, 223);
 }
 
 input[type=submit]  {
@@ -78,15 +98,31 @@ input[type=submit]  {
     letter-spacing: 2px;
     text-align: center;
     border-color: transparent;
-
     -webkit-transition: background-color .5s ease-out;
-  -moz-transition: background-color .5s ease-out;
-  -o-transition: background-color .5s ease-out;
-  transition: background-color .5s ease-out; 
+    -moz-transition: background-color .5s ease-out;
+    -o-transition: background-color .5s ease-out;
+    transition: background-color .5s ease-out; 
 
 }
 
 input[type=submit]:hover {
     background-color: black;
     
+}
+
+#listdisp {
+    font-weight: 100;
+    margin: 2% 12% 2% 2%;
+    color: ghostwhite;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    border-color: transparent;
+    opacity: .6;  
+    }
+
+.shoppingItems {
+    
+    padding-bottom:20px;
 }
