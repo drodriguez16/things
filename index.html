@@ -15,7 +15,7 @@
     <!-- Here will be the main input where users add to list -->
     <div class="header">
       <input id="listfield" type="text" value="" placeholder="Add list item"></input>
-      <input id="submitbtn" type="submit" value="submit"><a href="#"></a></input>
+      <input id="submitbtn" type="submit" value="+"><a href="#"></a></input>
 
     </div>
 
@@ -34,48 +34,57 @@
 <script type="text/javascript">
   $(document).ready(function () {
 
-
+    var newItem ="";
     //create shopping array list
     var shoppingList = [];
 
-    shoppingList.push("Milk");
-    shoppingList.push("Eggs");
-    shoppingList.push("Banana");
-    shoppingList.push("Sugar");
-    shoppingList.push("Apple");
+    // shoppingList.push("Milk");
+    // shoppingList.push("Eggs");
+    // shoppingList.push("Banana");
+    // shoppingList.push("Sugar");
+    // shoppingList.push("Apple");
 
-    //Append these items to the <div id="listdisp"></div>
-    //use Jquery to get the listdisp element from the DOM
     var ShoppingListContainer = $('#listdisp');
 
-    for(var i=0; i<shoppingList.length; i++)
-    {
-      ShoppingListContainer.append("<div class='shoppingItems'>"+shoppingList[i]+"</div>");
-    }
+    diplayNewItems();
 
-    //lets declare a variable that will hold the value of the input box
-    var newItem ="";
-
-    //When the user click on the Submit button, we want to get the new item out of the input box
-    //lets create a click event using Jquery that listen to the mouse click on the submit button
     $("#submitbtn").click(function()
-    {
-        //Lets get the new item that we need to add to the list using jquery
-        newItem = $("#listfield").val();//.val gets the value of the input
-        //lets push that new item to the shopping list
+    {       
+        newItem = $("#listfield").val();
         shoppingList.push(newItem);
-
-        // lets empty that Html shopping list container 
         ShoppingListContainer.html("");
-       
-       //lets loop again through all of the items on the shopping list and add them to the shopping list container
-        for(var i=0; i<shoppingList.length; i++)
-        {
-          ShoppingListContainer.append("<div class='shoppingItems'>"+shoppingList[i]+"</div>");
-        }
-
-        $("#listfield").val("");//empty the input for the next item 
+        diplayNewItems();       
    });
 
+   $(".removeme").click(function()
+   {
+     var removeItemAt = $(this).attr("data-shoppingListIndex");
+     removeItemFromShoppingList (removeItemAt);
+   });
+
+    // functions -- refactor
+    function diplayNewItems()
+    {
+      ShoppingListContainer.html("");
+      for(var i=0; i<shoppingList.length; i++)
+      {
+        ShoppingListContainer.append("<div class='shoppingItems' style='color:white; font-size:24px; border-bottom:1px solid black; background-color:#26265f;padding:10px;font-weight:bold; text-align:center;  width:100%;'>"+shoppingList[i]+"<div style='display:inline;'><button style='color:red;float:right; padding: 4px;    background: #22222b;    border: none;    border-radius: 10px; font-size:24px; font-weight:blod;'class='removeme'data-shoppingListIndex='"+i+"'>Remove</button></div></div>");
+      }
+      $("#listfield").val("");//empty the input for the next item 
+      $(".removeme").click(function()
+        {
+          var removeItemAt = $(this).attr("data-shoppingListIndex");
+          removeItemFromShoppingList (removeItemAt);
+        });
+    }
+
+      //remove item from shopping list array 
+function removeItemFromShoppingList (index)
+{
+  shoppingList.splice(index,1);
+  diplayNewItems();  
+}
+
   });
+
 </script>
