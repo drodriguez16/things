@@ -10,9 +10,10 @@
 body { 
 background-color: midnightblue;
 display: flex;
-padding: 2% 8% 20% 8%;
+padding: 2% 4% 20% 4%;
 margin-bottom: 0px;;
 font-family: 'notcouriersansregular';
+flex-direction: row-reverse;
 }
 
 h1 {
@@ -21,23 +22,40 @@ h1 {
     margin-bottom: 10%;
 }
 
-.bodysect {
-    width: 100%;
+.bodysect1 {
+    width: 60%;
+    display: inline-flex
+    padding: 2%;
+    height: 640px;
 }
 
-.bodysect h1 {
+.bodysect2 {
+    width: 35%;
+    display: flex;
+    padding: 2%;
+}
+
+.bodysect1 h1 {
     color: ghostwhite;
     text-align: center;
     font-weight:100;
-    
+}
+
+.title {
+    color: white;
+    width: 100%;;
+    order: 1;
+ 
 }
 
 .header {
-width: 100%; 
-display: flex;
+    display: inline-flex;
     align-items: center;
-    
-}
+    order:2 ;
+    width: 100%;
+    }
+
+
 
 ::placeholder{
     color: #fff;
@@ -120,9 +138,35 @@ input[type=submit]:hover {
     text-align: center;
     border-color: transparent;
     opacity: .6;  
+    flex-direction: column;
     }
 
-.shoppingItems {
-    
+.shoppingItems a {
+    outline: 1px solid blue; 
     padding-bottom:20px;
+    flex-grow: 1;
+    display: inline-flex;
+}
+
+.itemMenuBlock button {
+    background-image: url("assets/trash.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: transparent;
+    border: 0px;
+    height: 52px;
+    width: 32px;
+    border-radius: 20px;
+    margin-bottom: 2%;
+    display: inline-flex;
+}
+
+#sidelist {
+border-right: 1px solid blue;
+
+width: 100%;
+min-height: 400px;
+color: #fff;
+font-size: 22px;
+padding: 4%;
 }

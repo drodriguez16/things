@@ -8,29 +8,33 @@
 </head>
 
 <body>
-  <section class="bodysect">
-    <h1>Simple List</h1>
+  <section class="bodysect1">
+    <div class="title"><h1>Simple List</h1></div>
 
 
     <!-- Here will be the main input where users add to list -->
     <div class="header">
       <input id="listfield" type="text" value="" placeholder="Add list item"></input>
       <input id="submitbtn" type="submit" value="+"><a href="#"></a></input>
-
     </div>
 
 
     <!-- This is the section where the list is displayed -->
-    <div class="overlayt">
-      
+    <div class="overlayt">    
        <div id="listdisp"></div>
-  
     </div>
 
-
-
-
+   
   </section>
+
+    <!-- This is the section where the archived list is displayed -->
+<section class="bodysect2">
+    <div id="sidelist">
+  
+   </div>
+</section>
+
+
 </body>
 
 </html>
@@ -91,10 +95,10 @@ $.getJSON("https://api.myjson.com/bins/ab128",function(data){
         "<div class='shoppingItems' >"+
           "<div class='ItemNameBlock'>"
             +shoppingList[i]+
-          "</dv>"+
+          "</div>"+
           "<div class='itemMenuBlock'>"+
             "<button class='removeme'data-shoppingListIndex='"+i+"'>"+
-              "Remove"+
+              "<div clas='trash></div>'"+
             "</button>"+
           "</div>"+
         "</div>");
@@ -107,12 +111,17 @@ $.getJSON("https://api.myjson.com/bins/ab128",function(data){
           removeItemFromShoppingList (removeItemAt);
         });
     }
+
 //remove item from shopping list array 
 function removeItemFromShoppingList (index)
 {
   shoppingList.splice(index,1);
   diplayNewItems();  
 }
+
+let lftdisp = $('#sidelist');
+
+lftdisp.append("item 1");
 
   });
 
