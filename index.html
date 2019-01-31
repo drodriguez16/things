@@ -104,9 +104,13 @@ function removeItemFromShoppingList (index)
   diplayNewItems();  
 }
 
-let lftdisp = $('#sidelist');
+let lftDisp = $('#sidelist');
 
-lftdisp.append("item 1");
+for (i=0; i < lftDisp.length; i++) {
+  lftDisp.append("item 1" + "<br>");
+
+}
+
 
   });
 
