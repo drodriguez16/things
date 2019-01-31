@@ -8,15 +8,14 @@
 </head>
 
 <body>
-  <section class="bodysect">
-    <h1>Simple List</h1>
+  <section class="bodysect1">
+    <div class="title"><h1>Simple List</h1></div>
 
 
     <!-- Here will be the main input where users add to list -->
     <div class="header">
       <input id="listfield" type="text" value="" placeholder="Add list item"></input>
       <input id="submitbtn" type="submit" value="+"><a href="#"></a></input>
-
     </div>
 
 
@@ -25,8 +24,17 @@
        <div id="listdisp"></div>
     </div>
 
-
+   
   </section>
+
+    <!-- This is the section where the archived list is displayed -->
+<section class="bodysect2">
+    <div id="sidelist">
+  
+   </div>
+</section>
+
+
 </body>
 
 </html>
@@ -88,6 +96,7 @@
           removeItemFromShoppingList (removeItemAt);
         });
     }
+
 //remove item from shopping list array 
 function removeItemFromShoppingList (index)
 {
@@ -95,6 +104,9 @@ function removeItemFromShoppingList (index)
   diplayNewItems();  
 }
 
+let lftdisp = $('#sidelist');
+
+lftdisp.append("item 1");
 
   });
 
