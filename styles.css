@@ -120,9 +120,25 @@ input[type=submit]:hover {
     text-align: center;
     border-color: transparent;
     opacity: .6;  
+    flex-direction: column;
     }
 
-.shoppingItems {
-    
+.shoppingItems a {
+    outline: 1px solid blue; 
     padding-bottom:20px;
+    flex-grow: 1;
+    display: inline-flex;
+}
+
+.itemMenuBlock button {
+    background-image: url("assets/trash.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: transparent;
+    border: 0px;
+    height: 52px;
+    width: 32px;
+    border-radius: 20px;
+    margin-bottom: 2%;
+    display: inline-flex;
 }

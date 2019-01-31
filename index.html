@@ -21,13 +21,9 @@
 
 
     <!-- This is the section where the list is displayed -->
-    <div class="overlayt">
-      
+    <div class="overlayt">    
        <div id="listdisp"></div>
-  
     </div>
-
-
 
 
   </section>
@@ -76,10 +72,10 @@
         "<div class='shoppingItems' >"+
           "<div class='ItemNameBlock'>"
             +shoppingList[i]+
-          "</dv>"+
+          "</div>"+
           "<div class='itemMenuBlock'>"+
             "<button class='removeme'data-shoppingListIndex='"+i+"'>"+
-              "Remove"+
+              "<div clas='trash></div>'"+
             "</button>"+
           "</div>"+
         "</div>");
@@ -98,6 +94,7 @@ function removeItemFromShoppingList (index)
   shoppingList.splice(index,1);
   diplayNewItems();  
 }
+
 
   });
 
