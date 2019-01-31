@@ -163,10 +163,9 @@ input[type=submit]:hover {
 
 #sidelist {
 border-right: 1px solid blue;
-
 width: 100%;
 min-height: 400px;
 color: #fff;
 font-size: 22px;
-padding: 4%;
+padding: 25% 4% 10% 4%;;
 }
