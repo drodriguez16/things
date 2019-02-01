@@ -24,7 +24,6 @@ h1 {
 
 .bodysect1 {
     width: 60%;
-    display: inline-flex
     padding: 2%;
     height: 640px;
 }
@@ -33,6 +32,7 @@ h1 {
     width: 35%;
     display: flex;
     padding: 2%;
+
 }
 
 .bodysect1 h1 {
@@ -128,9 +128,16 @@ input[type=submit]:hover {
     
 }
 
+/**Container for the item listed and the trashcan **/
+
+.overlayt {
+   
+
+}
+
+
 #listdisp {
-    font-weight: 100;
-    margin: 2% 12% 2% 2%;
+    padding: 10px 10px 10px 10px;
     color: ghostwhite;
     font-size: 24px;
     text-transform: uppercase;
@@ -138,29 +145,41 @@ input[type=submit]:hover {
     text-align: center;
     border-color: transparent;
     opacity: .6;  
-    flex-direction: column;
+    margin-top: 20px;
     }
 
-.shoppingItems a {
-    outline: 1px solid blue; 
-    padding-bottom:20px;
-    flex-grow: 1;
-    display: inline-flex;
-}
-
-.itemMenuBlock button {
+    .ItemNameBlock {
+    width:65%;
+    float: left;   
+    position: relative; 
+    left: 12%; 
+    border-bottom: 1px solid gray;      
+    line-height: 50px;
+ 
+    }
+    
+    .itemMenuBlock button {
     background-image: url("assets/trash.png");
     background-repeat: no-repeat;
     background-size: auto;
     background-color: transparent;
     border: 0px;
-    height: 52px;
+    height: 35px;
     width: 32px;
     border-radius: 20px;
-    margin-bottom: 2%;
+    margin-top: 5px;
+    margin-bottom: 4%;
+    display: inline-block;
+    }
+
+/**End Container**/
+
+
+.shoppingItems a {
+    padding-bottom:20px;
+    flex-grow: 1;
     display: inline-flex;
 }
-
 #sidelist {
 border-right: 1px solid blue;
 width: 100%;
