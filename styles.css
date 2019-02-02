@@ -28,13 +28,6 @@ h1 {
     height: 640px;
 }
 
-.bodysect2 {
-    width: 35%;
-    display: flex;
-    padding: 2%;
-
-}
-
 .bodysect1 h1 {
     color: ghostwhite;
     text-align: center;
@@ -180,11 +173,76 @@ input[type=submit]:hover {
     flex-grow: 1;
     display: inline-flex;
 }
-#sidelist {
-border-right: 1px solid blue;
-width: 100%;
-min-height: 400px;
-color: #fff;
-font-size: 22px;
-padding: 25% 4% 10% 4%;;
+
+/** Left Side */
+
+.bodysect2 {
+    width: 30%;
+    padding: 4% 4% 1% 4%;  
+    background-color: whitesmoke;
+    border-radius: 18px;    
+
+    -webkit-box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.41);
+    box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.41); 
 }
+
+.searchbr {
+    display: inline-flex;
+    align-items: flex-start;
+}
+
+.searchbr input {
+    font-family: 'notcouriersansregular';
+    font-weight: 100;
+    margin-right: 20px;
+    height: 80px;
+    border-radius: 54px;
+    background-color: royalblue;
+    color: ghostwhite;
+    font-size: 34px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    border-color: transparent;
+    opacity: .8;
+    flex-grow: 9;
+    width: 80%;
+}
+
+.searchbr button {
+    font-family: 'notcouriersansregular';
+    width: 30%;
+    font-weight: 800;
+    height: 80px;
+    border-radius: 100px;
+    background-color: royalblue;
+    color: ghostwhite;
+    font-size: 18px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    border-color: transparent;
+    -webkit-transition: background-color .5s ease-out;
+    -moz-transition: background-color .5s ease-out;
+    -o-transition: background-color .5s ease-out;
+    transition: background-color .5s ease-out;  
+    width: 20%;
+}
+
+.searchbr:hover button {
+    background-color: black;
+}
+
+#sidelist {     
+    min-height: 400px;
+    color: midnightblue;
+    font-size: 22px;
+    padding: 5% 2% 10% 2%;
+    width: 90%;
+    }
+
+.leftliststyle {
+border-bottom: 1px solid rgba(24, 28, 109, 0.19);
+ }
