@@ -49,6 +49,11 @@
 <script type="text/javascript">
   $(document).ready(function () {
 
+    const filterItems = (needle, heystack) => {
+    let query = needle.toLowerCase();
+    return heystack.filter(item => item.toLowerCase().indexOf(needle) >= 0);
+  }
+
     // create json obj easy 
 //http://www.objgen.com/json/models/DxwO
 
@@ -141,19 +146,15 @@ $.getJSON("https://api.myjson.com/bins/ab128",function(onlineData){
  for(var position = 0; position < itemBrowser.length; position++) {
   lftDisp.append("<div class='leftliststyle'>" + itemBrowser[position] + "</div>" + "<button> + </button>");
 }
-
-
-
-
 }); 
 
 $('#sidesearch').keyup(function(){
-  alert($(this).val());
+  let newItemBrowser = filterItems($(this).val(),newItemBrowser); 
+      console.log(newItemBrowser);
 });
 
 
 
 
   });
-
 </script>
