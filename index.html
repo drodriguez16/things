@@ -34,7 +34,7 @@
 
         </input>
 
-        <button type="button"> Search </button>
+        <button id="sidesearch" type="button"> Search </button>
   
      </div>
 
@@ -115,7 +115,7 @@ function removeItemFromShoppingList (index)
 }
 
 // Appends list to side section
-let lftDisp = $('#sidelist');
+var lftDisp = $('#sidelist');
 var itemBrowser = ["Apple", "Banana", "Pears"];
 
 // Get list from ONLINE or Database
@@ -128,8 +128,13 @@ $.getJSON("https://api.myjson.com/bins/ab128",function(onlineData){
   // Physically add the items from above into the sife bar
  for(var position = 0; position < itemBrowser.length; position++) {
   lftDisp.append("<div class='leftliststyle'>" + itemBrowser[position] + "</div>" + "<button> + </button>");
-
 }
+
+$('#sidesearch').keyup(function(){
+  alert($(this).val());
+});
+
+
 }); 
 
 

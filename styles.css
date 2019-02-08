@@ -17,7 +17,7 @@ flex-direction: row-reverse;
 }
 
 h1 {
-    font-size: 82px;
+    font-size: 62px;
     letter-spacing: 1px;
     margin-bottom: 10%;
 }
@@ -200,7 +200,7 @@ input[type=submit]:hover {
     border-radius: 54px;
     background-color: royalblue;
     color: ghostwhite;
-    font-size: 34px;
+    font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
@@ -218,8 +218,8 @@ input[type=submit]:hover {
     border-radius: 100px;
     background-color: royalblue;
     color: ghostwhite;
-    font-size: 18px;
-    padding: 5px 20px;
+    font-size: 14px;
+    padding: 5px 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
@@ -228,7 +228,7 @@ input[type=submit]:hover {
     -moz-transition: background-color .5s ease-out;
     -o-transition: background-color .5s ease-out;
     transition: background-color .5s ease-out;  
-    width: 20%;
+   
 }
 
 .searchbr:hover button {
