@@ -30,12 +30,9 @@
     <!-- This is the section where the archived list is displayed on the left side -->
 <section class="bodysect2">
     <div class="searchbr">
-        <input type="search">
+        <input type="search" id="sidesearch" />
 
-        </input>
-
-        <button id="sidesearch" type="button"> Search </button>
-  
+        
      </div>
 
 
@@ -145,14 +142,14 @@ $.getJSON("https://api.myjson.com/bins/ab128",function(onlineData){
   lftDisp.append("<div class='leftliststyle'>" + itemBrowser[position] + "</div>" + "<button> + </button>");
 }
 
-$('#sidesearch').keyup(function(){
-  alert($(this).val());
-});
+
 
 
 }); 
 
-
+$('#sidesearch').keyup(function(){
+  alert($(this).val());
+});
 
 
 
