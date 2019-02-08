@@ -27,8 +27,18 @@
    
   </section>
 
-    <!-- This is the section where the archived list is displayed -->
+    <!-- This is the section where the archived list is displayed on the left side -->
 <section class="bodysect2">
+    <div class="searchbr">
+        <input type="search">
+
+        </input>
+
+        <button type="button"> Search </button>
+  
+     </div>
+
+
     <div id="sidelist">
   
    </div>
@@ -91,11 +101,11 @@ $.getJSON("https://api.myjson.com/bins/ab128",function(data){
       ShoppingListContainer.html("");
       for(var i=0; i<shoppingList.length; i++)
       {
-        ShoppingListContainer.append(
+        ShoppingListContainer.append( 
         "<div class='shoppingItems' >"+
           "<div class='ItemNameBlock'>"
             +shoppingList[i]+
-          "</div>"+
+          "</div>"+ 
           "<div class='itemMenuBlock'>"+
             "<button class='removeme'data-shoppingListIndex='"+i+"'>"+
               "<div clas='trash></div>'"+
@@ -119,12 +129,27 @@ function removeItemFromShoppingList (index)
   diplayNewItems();  
 }
 
+// Appends list to side section
 let lftDisp = $('#sidelist');
+var itemBrowser = ["Apple", "Banana", "Pears"];
 
-for (i=0; i < 10; i++) {
-  lftDisp.append("Item List" + " " + "<br>" );
+// Get list from ONLINE or Database
+$.getJSON("https://api.myjson.com/bins/ab128",function(onlineData){
+  var tempList = onlineData.ShoppingList;
+  for(var position = 0; position < tempList.length; position++) {
+  itemBrowser.push(tempList[position]);
+  }
+
+  // Physically add the items from above into the sife bar
+ for(var position = 0; position < itemBrowser.length; position++) {
+  lftDisp.append("<div class='leftliststyle'>" + itemBrowser[position] + "</div>" + "<button> + </button>");
 
 }
+}); 
+
+
+
+
 
 
   });
